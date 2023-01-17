@@ -1,0 +1,44 @@
+<h1><strong>PRODUCT LIST</strong></h1>
+<br />
+<h1>Click here to add a new product  <a routerLink="/admin/products/new" class="btn btn-primary">NEW</a></h1>
+
+<br />
+<div class="form-group text-center" style="margin: 0 800px 0 0;">
+  <p>
+    <input
+      #query
+      (keyup)="filter(query.value)"
+      type="text"
+      class="form-control me-2"
+      placeholder=" &#xF002; &nbsp; Search " style="font-family: FontAwesome, Arial"
+    />
+ </p>
+</div>
+<br />
+
+<table class="table">
+  <thead>
+    <tr>
+      <th style="width: 200px;">Title</th>
+      <th class="text-center" style="width:150px">Price</th>
+      <th style="width:150px"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of products$" >
+      <td > <img [src]="p.payload.val().imageUrl" class="thumbnail">&emsp;{{ p.payload.val().title }}</td>
+      <td class="text-center">{{ p.payload.val().price | currency: 'USD' }}</td>
+      <td class="text-center">
+        <a [routerLink]="['/admin/products/', p.key]">Edit</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- <mat-paginator
+#paginator
+    [length]="this.products$?.length"
+    [pageSize]="15"
+    [pageSizeOptions]="[15, 30]"
+    (page)="OnPageChange($event)"
+>
+</mat-paginator> -->

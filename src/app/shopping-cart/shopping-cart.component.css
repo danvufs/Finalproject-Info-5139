@@ -1,0 +1,53 @@
+h1,
+h3 {
+  margin-left: 50px;
+}
+
+table {
+  border-collapse: collapse;
+  margin-left: 50px;
+  width: 85%;
+}
+th,
+td {
+  border: 2px solid rgb(245, 240, 240);
+  text-align: left;
+}
+
+th {
+  background-color: rgb(194, 196, 193);
+}
+td {
+  height: 50px;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(235, 230, 230);
+}
+
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 2px solid rgb(188, 185, 185);
+}
+
+.btn-sm{
+  margin-left: 25px;
+}
+
+.col-3{
+  border: 2px solid rgb(188, 185, 185);
+  
+}
+
+.btn.btn-primary.btn-sm {
+  background: -webkit-linear-gradient(right, rgb(224, 172, 224), #96dce7);
+  color: black
+}
+
+.btn.btn-warning.btn-sm.me-2 {
+  background: -webkit-linear-gradient(right, rgb(224, 172, 224), #96dce7);
+}

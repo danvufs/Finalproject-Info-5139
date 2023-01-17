@@ -1,0 +1,47 @@
+<link
+  href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/>
+<div class="container register">
+  <div class="row">
+    <div class="col-md-3 register-left">
+      <h2>Welcome to IWD Shoes Shop</h2>
+      <hr />
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png"
+        alt="Bootstrap"
+        width="60"
+        height="50"
+      />
+      <h3>Please sign up to log in</h3>
+      <div><input
+        type="submit"
+        class="btnLogin1"
+        value="Sign Up"
+        routerLink="/register"
+      /></div>
+    </div>
+    <div class="col-md-6 register-right">
+      <div class="">
+        <div>
+
+          <input
+            type="submit"
+            class="btnLogin"
+            value="Login With Google"
+            (click)="login()"
+            routerLink="/home"
+          />
+        </div>
+        <div>
+          <input
+            type="submit"
+            class="btnLogin"
+            value="Log In With Other Email"
+            routerLink="/signin"
+          />
+      </div>
+    </div>
+  </div>
+</div>

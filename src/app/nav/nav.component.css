@@ -1,0 +1,112 @@
+/* Modify the background color */
+
+
+.navbar.navbar-expand-lg {
+    background: -webkit-linear-gradient(right, rgb(224, 172, 224), #96dce7);
+    margin-bottom: 10px;
+}
+
+.navbar-brand {
+    cursor: pointer;
+    color: #ffc107;
+}
+
+.nav-link {
+    color: white;
+    cursor: pointer;
+    position: relative;
+    margin-left: 5px;
+}
+
+.nav-link:hover {
+    background: #EBC7E8;
+    border-radius: 7px 10px;
+    color: #898AA6;
+    transition: .4s;
+}
+
+
+.dropdown-menu {
+    background: -webkit-linear-gradient(right, rgb(224, 172, 224), #96dce7);
+}
+
+.dropdown-item {
+    color: white;
+    cursor: pointer;
+}
+
+.bi.bi-cart4 {
+    color: plum;
+}
+
+.badge.bg-warning.bg-pill {
+    background: -webkit-linear-gradient(right, rgb(224, 172, 224), rgb(224, 172, 224));
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    color: white;
+}
+
+.nav-link.dropdown-toggle {
+    color: white;
+}
+
+#rightnav {
+    position: absolute;
+    right: 8%;
+    color: #0d6efd;
+}
+
+@media (max-width: 989px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+        padding-right: var(--bs-navbar-nav-link-padding-x);
+        padding-left: var(--bs-navbar-nav-link-padding-x);
+    }
+    #rightnav {
+        position: absolute;
+        margin-top: -40px;
+        right: 8%;
+        color: #0d6efd;
+    }
+}
+
+@media (min-width: 990px) and (max-width: 1980px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+        padding-right: var(--bs-navbar-nav-link-padding-x);
+        padding-left: var(--bs-navbar-nav-link-padding-x);
+    }
+    #rightnav {
+        position: absolute;
+        /* margin-top: -0px; */
+        right: 8%;
+        color: #0d6efd;
+    }
+}
+
+.shopping-cart {
+    position: absolute;
+    right: 20%;
+}
+
+.nav-link.active{
+    color: white !important;
+    font-weight: 600;
+}
+.title-shop {
+    font-size: 20px;
+    font-weight: 600;
+    color: white !important;
+    margin-left: 50px;
+}
+
+@media only screen and (max-width: 1200px) {
+    #navbarSupportedContent {
+        display: block !important;
+    }
+}
+

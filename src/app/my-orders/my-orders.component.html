@@ -1,0 +1,24 @@
+<br>
+<h1>My Basket</h1>
+<br>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Customer Name</th>
+      <th>Address</th>
+      <th>Date</th>
+      <th></th>
+    </tr>
+  </thead> 
+  <tbody>
+    <tr *ngFor="let order of orders$ | async">
+      <td>{{order.shipping.name}}</td>
+      <td>{{ order.shipping.address}}</td>
+      <td>{{ order.datePlaced | date}}</td>
+      <td>
+        <a [routerLink]="['/view-order']">View</a>
+      </td>
+    </tr>
+  </tbody> 
+</table>
+<br>

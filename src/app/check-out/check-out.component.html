@@ -1,0 +1,113 @@
+<div class="container">
+    <div class="row">
+      <div class="col-7">
+        <h1 style="margin-top: 20px;"><strong>Checkout</strong></h1>
+        <hr    style="width: 80%;"   />
+        <h1>Please fill the information about shipping</h1>
+        <br />
+        <form #f="ngForm">
+          <div class="form-group">
+            <input
+              #name="ngModel"
+              [(ngModel)]="shipping.name"
+              name="name"
+              id="name"
+              type="text"
+              class="form-control"
+              placeholder="First and Last Name"
+              style="width: 60%;"   
+              required        
+            />
+            <div
+            class="alert alert-warning"
+            *ngIf="name.touched && name.invalid"
+          >
+            Title field is required.
+            <br />
+          </div>
+            <br />
+            <div class="form-group">
+              <input
+                #address="ngModel"
+                [(ngModel)]="shipping.address"
+                name="address"
+                id="address"
+                type="text"
+                class="form-control"
+                placeholder="Address"
+                style="width: 60%;"  
+                required
+              />
+              <div
+            class="alert alert-warning"
+            *ngIf="address.touched && address.invalid"
+          >
+            Address field is required.
+            <br />
+          </div>
+              
+              <br />
+            </div>
+            <div class="form-group">
+              <input
+                #city="ngModel"
+                [(ngModel)]="shipping.city"
+                name="city"
+                id="city"
+                type="text"
+                class="form-control"
+                placeholder="City"
+                style="width: 60%;"  
+                required
+              />
+              <div
+            class="alert alert-warning"
+            *ngIf="city.touched && city.invalid"
+          >
+            City field is required.
+            <br />
+          </div>
+            </div>
+            <div class="form-group">
+              <br />
+              <button class="btn btn-primary btn-sm" (click)="placeOrder()" [disabled]="!f.valid">
+                Place order
+              </button>
+              <br />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-4">
+        <h3 class="card-title"><strong> Order Summary </strong> </h3>
+        <p class="card-text">You have <strong> {{ cart.totalItemsCount }} </strong> items in your shopping cart.</p>
+        <ul class="list-group list-group-flush">
+            <li *ngFor="let item of cart.items" class="list-group-item">
+                <strong>{{ item.quantity }}</strong> x <strong>{{ item.title }}</strong>
+                <div class="float-right">
+                    {{ item.totalPrice | currency }}
+                </div>
+            </li>
+            <li class="list-group-item font-weight-bold">
+              <strong>Shipping & Handling</strong>
+              <div class="float-right">
+                {{ cart.totalItemsCount * 10 | currency}}
+              </div>
+            </li>
+            <li class="list-group-item font-weight-bold">
+              <strong>Estimated Tax & Other Fees</strong>
+              <div class="float-right">
+                {{ cart.totalPrice * 0.13 | currency}}
+              </div>
+            </li>
+            <br>
+            <li class="list-group-item font-weight-bold">
+                <strong>Total</strong>
+                <div class="float-right">
+                    {{ (cart.totalPrice * 1.13) + cart.totalItemsCount * 10 | currency }}
+                </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>

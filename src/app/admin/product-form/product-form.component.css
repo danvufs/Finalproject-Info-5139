@@ -1,0 +1,12 @@
+.card-img-top{
+    height: 400px;
+    width: 410px;
+}
+
+.btn.btn-primary.me-2 {
+    background-color: plum;
+}
+
+.btn.btn-danger {
+    background-color: #96dce7;
+}
