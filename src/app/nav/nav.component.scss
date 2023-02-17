@@ -78,7 +78,7 @@ body {
 
     #rightnav {
         position: absolute;
-        margin-top: -40px;
+        margin-top: 2px;
         right: 8%;
         color: #0d6efd;
     }
@@ -135,12 +135,15 @@ body {
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 3rem;
+    top: 1.7rem;
     right: 1rem;
     //make it alway float on top
     z-index: 999;
 }
-
+.btn-mode[_ngcontent-ejq-c117] svg[_ngcontent-ejq-c117] {
+    margin-right: 0rem;
+    /* margin-right: 0.1rem; */
+}
 .btn-mode svg {
     margin-right: .1rem;
 }
