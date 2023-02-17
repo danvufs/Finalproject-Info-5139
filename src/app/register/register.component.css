@@ -106,7 +106,15 @@
     background-color: white;
     color: #495057;
 }
-
+.register[_ngcontent-sbk-c56]   .nav-tabs[_ngcontent-sbk-c56]   .nav-link[_ngcontent-sbk-c56] {
+    padding: 2%;
+    height: 34px;
+    font-weight: 600;
+    color: #fff;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    margin-right: -1rem;
+}
 
 @media (min-width: 600px) {
     
