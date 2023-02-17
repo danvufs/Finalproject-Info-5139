@@ -27,6 +27,13 @@
     border-top-left-radius: 10% 50%;
     border-bottom-left-radius: 10% 50%;
 }
+
+@media (min-width: 767px) {
+    .col-md-6 {
+        width: 73%;
+    }
+    
+  }
 .register-left img{
     margin-top: 15%;
     margin-bottom: 5%;
@@ -106,11 +113,18 @@
     }
   }
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .btnLogin {
+        margin-bottom: 40px;
+        margin-left: 5.5em;
+    }
+    }
+   
   @media only screen and (min-width: 400px) and (max-width: 767px) {
     .btnLogin {
         margin-top: 40px;
         margin-bottom: 40px;
-        margin-left: 3.8em;
+        margin-left: 5em;
     }
   }
 
