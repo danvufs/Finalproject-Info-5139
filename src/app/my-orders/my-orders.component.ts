@@ -21,5 +21,19 @@ export class MyOrdersComponent {
     } 
   }
 
-   
+// export class MyOrdersComponent {
 
+//   orders$;
+
+//   constructor(
+//     private authService: AuthService,
+//     private orderService: OrderService) { }
+
+//   ngOnInit() {
+//     this.authService.user$.subscribe(user => {
+//       if (user) {
+//         this.orders$ = this.orderService.getOrdersByUser(user.uid);
+//       }
+//     });
+//   }
+// }

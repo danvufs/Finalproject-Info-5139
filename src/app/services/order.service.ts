@@ -10,18 +10,20 @@ export class OrderService {
 
   constructor(private db: AngularFireDatabase, private shoppingCartService: ShoppingCartService) { }
 
-  async storeOrder(order){
-      let result= await this.db.list('/orders').push(order);
-      this.shoppingCartService.clearCart();
-      return result;
+  async storeOrder(order, userId) {
+    order.userId = userId;
+    let result = await this.db.list('/orders').push(order);
+    this.shoppingCartService.clearCart();
+    return result;
   }
 
-  getOrders() { 
+  getOrders() {
     return this.db.list('/orders').valueChanges();
   }
 
-   getOrdersByUser(userId: string) {
+  getOrdersByUser(userId: string) {
     return this.db.list('/orders', query => query.orderByChild('userId').equalTo(userId))
-   
+
   }
+
 }

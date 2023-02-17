@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+//common modules
+import { CommonModule } from '@angular/common';
 
 
 
@@ -31,6 +33,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
 import { ProductQuantityComponent } from './product-quantity/product-quantity.component';
 import { AuthService } from './services/auth.service';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { DarkmodeComponent } from '../components/darkmode/darkmode.component';
 
 
 
@@ -52,7 +55,8 @@ import { SignInComponent } from './sign-in/sign-in.component';
     ProductFormComponent,
     ProductCardComponent,
     ProductQuantityComponent,
-    SignInComponent
+    SignInComponent,
+    DarkmodeComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +69,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
     Ng2SearchPipeModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
-   
+    CommonModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

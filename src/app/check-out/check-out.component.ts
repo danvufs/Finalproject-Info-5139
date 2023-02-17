@@ -56,7 +56,7 @@ export class CheckOutComponent implements OnInit, OnDestroy {
       })
     };
     //console.log(order);
-    let result=await this.orderService.storeOrder(order);
+    let result=await this.orderService.storeOrder(order, this.uderId);
     this.shoppingCartService.clearCart();
     //Alert user that order is placed
     alert('Order placed successfully');
